@@ -20,7 +20,8 @@
 
 - (void)setObject:(id)value forKeyedSubscript:(id)key
 {
-	[self setObject:value forKey:key];
+	if (!value) [self removeObjectForKey:key];
+	else [self setObject:value forKey:key];
 }
 
 @end

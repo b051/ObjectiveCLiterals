@@ -9,12 +9,21 @@
 
 @interface NSDictionary (Literal)
 
+/*!
+ * In LLVM 4.0 (XCode 4.5) or higher allows myPFObject[key].
+ @param key The key.
+ */
 - (id)objectForKeyedSubscript:(id)aKey;
 
 @end
 
 @interface NSMutableDictionary (Literal)
 
+/*!
+ In LLVM 4.0 (XCode 4.5) or higher allows myObject[key] = value
+ @param object The object.
+ @param key The key.
+ */
 - (void)setObject:(id)value forKeyedSubscript:(id)key;
 
 @end
